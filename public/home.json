@@ -1,0 +1,80 @@
+[
+    {
+    "image": "https://i.ibb.co/kX3yYK5/Single-family-home.jpg",
+    "estate_title": "Luxury Lakefront Mansion",
+    "id": "001",
+    "segment_name": "Single-family home",
+    "description": "Experience luxury living in this exquisite lakefront mansion. Boasting 5 bedrooms, 6 bathrooms, and stunning views of the lake, this home offers unparalleled comfort and elegance.",
+    "price": "$2,500,000",
+    "status": "sale",
+    "area": "5,000 sq ft",
+    "location": "Lakefront Drive, Cityville",
+    "facilities": ["Swimming pool", "Gourmet kitchen", "Home theater"],
+    "view_property_button": "https://example.com/property001"
+    },
+    {
+    "image": "https://i.ibb.co/HtPkZTy/Apartment.jpg",
+    "estate_title": "Modern Downtown Apartment",
+    "id": "002",
+    "segment_name": "Apartment",
+    "description": "Live in the heart of the city in this sleek and modern apartment. Featuring 2 bedrooms, 2 bathrooms, and floor-to-ceiling windows offering panoramic city views, this apartment is perfect for urban living.",
+    "price": "$1,500 per month",
+    "status": "rent",
+    "area": "1,200 sq ft",
+    "location": "Downtown Avenue, Metropolis",
+    "facilities": ["Fitness center", "24/7 security", "Roof terrace"],
+    "view_property_button": "https://example.com/property002"
+    },
+    {
+    "image": "https://i.ibb.co/qNgcZN1/Townhouse.jpg",
+    "estate_title": "Cozy Townhouse Retreat",
+    "id": "003",
+    "segment_name": "Townhouse",
+    "description": "Escape to this charming townhouse nestled in a quiet neighborhood. With 3 bedrooms, 2.5 bathrooms, and a private backyard, this townhouse offers the perfect blend of comfort and tranquility.",
+    "price": "$350,000",
+    "status": "sale",
+    "area": "1,800 sq ft",
+    "location": "Tranquil Lane, Suburbia",
+    "facilities": ["Attached garage", "Patio", "Community park"],
+    "view_property_button": "https://example.com/property003"
+    },
+    {
+    "image": "https://i.ibb.co/rGZ26xj/Student-housing.jpg",
+    "estate_title": "Student Housing Complex",
+    "id": "004",
+    "segment_name": "Student housing",
+    "description": "Ideal accommodation for students, this housing complex offers furnished apartments with convenient amenities. Located near universities, it provides a conducive environment for studying and socializing.",
+    "price": "$800 per month",
+    "status": "rent",
+    "area": "800 sq ft",
+    "location": "University Street, Collegeland",
+    "facilities": ["Study lounge", "Laundry facilities", "Bike storage"],
+    "view_property_button": "https://example.com/property004"
+    },
+    {
+    "image": "https://i.ibb.co/jMTtN4S/Senior-living-community.jpg",
+    "estate_title": "Tranquil Senior Living Community",
+    "id": "005",
+    "segment_name": "Senior living community",
+    "description": "Enjoy retirement in this peaceful senior living community. With spacious apartments, onsite amenities, and a vibrant social atmosphere, residents can relax and thrive in their golden years.",
+    "price": "$3,000 per month",
+    "status": "rent",
+    "area": "1,500 sq ft",
+    "location": "Serene Boulevard, Elderly Haven",
+    "facilities": ["Community center", "Walking trails", "Medical services"],
+    "view_property_button": "https://example.com/property005"
+    },
+    {
+    "image": "https://i.ibb.co/L1Jms69/Vacation-rental.jpg",
+    "estate_title": "Seaside Vacation Rental",
+    "id": "006",
+    "segment_name": "Vacation rental",
+    "description": "Escape to paradise in this stunning seaside vacation rental. With breathtaking ocean views, private beach access, and luxurious amenities, this rental promises an unforgettable getaway.",
+    "price": "$300 per night",
+    "status": "rent",
+    "area": "2,500 sq ft",
+    "location": "Seaside Drive, Paradise Cove",
+    "facilities": ["Private beach", "Hot tub", "Oceanfront balcony"],
+    "view_property_button": "https://example.com/property006"
+    }
+    ]
