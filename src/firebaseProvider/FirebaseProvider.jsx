@@ -10,11 +10,11 @@ const googleProvider = new GoogleAuthProvider();
 
 const FirebaseProvider = ({ children }) => {
     const [user, setUser] = useState(null)
-console.log(user);
+    console.log(user);
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
-    const googleLogin =()=>{
+    const googleLogin = () => {
 
         return signInWithPopup(auth, googleProvider)
 
@@ -30,7 +30,7 @@ console.log(user);
             }
         });
     }, [])
-    const authInfo = { user, createUser, loginUser,googleLogin }
+    const authInfo = { user, createUser, loginUser, googleLogin }
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
