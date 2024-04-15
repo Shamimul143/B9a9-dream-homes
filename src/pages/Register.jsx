@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../firebaseProvider/FirebaseProvider";
-import GoogleLogin from "../components/GoogleLogin";
 
 
 const Register = () => {
 
     const { createUser } = useContext(AuthContext)
-    
+    const { googleLogin } = useContext(AuthContext)
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -38,9 +37,9 @@ const Register = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Image</span>
+                                    <span className="label-text">Image url</span>
                                 </label>
-                                <input type="url" name="image" placeholder="Your Image" className="input input-bordered" />
+                                <input type="url" name="image" placeholder="Your Image url" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -57,9 +56,12 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
                             </div>
-
                         </form>
-                        <GoogleLogin></GoogleLogin>
+                        
+                        <div className="py-5 space-x-5 text-center">
+                        <button onClick={() => googleLogin()} className="btn btn-accent">Google</button>
+                        <button className="btn btn-accent" >Github</button>
+                        </div>
                     </div>
                 </div>
             </div>
