@@ -16,7 +16,9 @@ const UpdateProfile = () => {
 
         updateUserProfile(name, image)
             .then(() => {
+                alert('Register successfully');
                 Navigate();
+                
             })
     }
 

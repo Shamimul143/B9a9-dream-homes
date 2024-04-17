@@ -11,30 +11,36 @@ const githubProvider = new GithubAuthProvider();
 
 const FirebaseProvider = ({ children }) => {
     const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
+
     console.log(user);
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
     const googleLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, googleProvider)
-        .then(() => {
-            alert('Register successfully');
-        })
-        .catch(() => { alert("Password minimum 6 character ") })
+            .then(() => {
+                alert('Register successfully');
+            })
+            .catch(() => { alert("Password minimum 6 character ") })
     }
     const githubLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, githubProvider)
-        .then(() => {
-            alert('Register successfully');
-        })
-        .catch(() => { alert("Password minimum 6 character ") })
+            .then(() => {
+                alert('Register successfully');
+            })
+            .catch(() => { alert("Password minimum 6 character ") })
     }
 
-    const loginUser = (email, password,name,image) => {
-        return signInWithEmailAndPassword(auth, email, password,name,image)
+    const loginUser = (email, password, name, image) => {
+        setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password, name, image)
     }
     const updateUserProfile = (name, image) => {
-        console.log(name,image);
+        setLoading(true)
         return updateProfile(auth.currentUser, {
             displayName: name,
             photoURL: image
@@ -43,6 +49,7 @@ const FirebaseProvider = ({ children }) => {
 
 
     const logOut = () => {
+        setLoading(true)
         return signOut(auth)
     }
 
@@ -51,10 +58,11 @@ const FirebaseProvider = ({ children }) => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
+                setLoading(false)
             }
         });
     }, [])
-    const authInfo = { user, createUser, loginUser, logOut, updateUserProfile, googleLogin,githubLogin }
+    const authInfo = { user, createUser, loginUser, logOut, updateUserProfile, googleLogin, githubLogin, loading }
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
