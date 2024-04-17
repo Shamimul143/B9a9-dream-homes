@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../firebaseProvider/FirebaseProvider";
 
 
@@ -7,10 +7,14 @@ import { AuthContext } from "../firebaseProvider/FirebaseProvider";
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
+    const navigate = useNavigate();
 
     const handleLogOut = () => {
         logOut()
-            .then(() => alert("Logout successfully"))
+            .then(() => {
+                alert("Logout successfully");
+                navigate("/login")
+            })
     }
 
 

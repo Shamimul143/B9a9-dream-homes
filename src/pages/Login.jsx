@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../firebaseProvider/FirebaseProvider";
+import { useNavigate } from "react-router-dom";
 
 
 const Login = () => {
     const { loginUser } = useContext(AuthContext)
-
+    const navigate = useNavigate();
     const handleLogin = (e) => {
         e.preventDefault()
         const email = e.target.email.value;
@@ -13,9 +14,12 @@ const Login = () => {
         console.log(email, password);
 
         loginUser(email, password)
-            .then(() => alert('Login successfully')
-                
-            )
+            .then(() => {
+                alert('Login successfully');
+                e.target.reset();
+                navigate("/")
+
+            })
             .catch(error => { console.error(error) })
 
     }
@@ -28,7 +32,7 @@ const Login = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleLogin} className="card-body">
-
+                        <h2 className="font-bold text-center">Login Now!</h2>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>

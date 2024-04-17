@@ -16,7 +16,7 @@ const UpdateProfile = () => {
 
         updateUserProfile(name, image)
             .then(() => {
-                alert('Register successfully');
+                alert('Update successfully');
                 Navigate();
                 
             })
@@ -31,6 +31,7 @@ const UpdateProfile = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleUpdate} className="card-body">
+                        <h2 className="font-bold text-center">Update Now!</h2>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
