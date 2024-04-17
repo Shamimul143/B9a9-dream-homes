@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../firebaseProvider/FirebaseProvider";
-
+import 'animate.css';
 
 
 const Navbar = () => {
@@ -20,11 +20,13 @@ const Navbar = () => {
 
 
     const links = <>
+    <div className="animate__animated animate__bounce animate__delay-1s lg:flex">
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/updateProfile">Update Profile</NavLink></li>
         <li><NavLink to="/register"> Register</NavLink></li>
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/blogs">Blogs</NavLink></li>
+        </div>
     </>
 
     return (

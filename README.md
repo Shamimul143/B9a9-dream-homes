@@ -10,7 +10,7 @@ Currently, two official plugins are available:
 
 Live site url: https://b9a9-dream-homes.netlify.app/
 
- bullet points:
+ Bullet Points:
  1. Dynamic Title
  2. Login page
  3. Registration Page
@@ -19,6 +19,8 @@ Live site url: https://b9a9-dream-homes.netlify.app/
  6. Private Router
 
 
-
-a. Swiper slider
-b. DaisyUi
+ Packages:
+ 1. Swiper slider 
+ 2. Animate.css
+ 2. DaisyUi
+ 
