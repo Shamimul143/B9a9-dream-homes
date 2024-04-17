@@ -22,5 +22,6 @@ Live site url: https://b9a9-dream-homes.netlify.app/
  Packages:
  1. Swiper slider 
  2. Animate.css
- 2. DaisyUi
+ 3. DaisyUi
+ 4. React-icons
  

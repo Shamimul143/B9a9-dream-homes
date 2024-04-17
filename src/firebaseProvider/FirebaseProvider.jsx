@@ -6,6 +6,7 @@ import auth from "../firebaseConfig"
 
 export const AuthContext = createContext(null)
 
+
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 
@@ -22,6 +23,7 @@ const FirebaseProvider = ({ children }) => {
         return signInWithPopup(auth, googleProvider)
             .then(() => {
                 alert('Register successfully');
+              
             })
             .catch(() => { alert("Password minimum 6 character ") })
     }
@@ -30,6 +32,7 @@ const FirebaseProvider = ({ children }) => {
         return signInWithPopup(auth, githubProvider)
             .then(() => {
                 alert('Register successfully');
+                
             })
             .catch(() => { alert("Password minimum 6 character ") })
     }
