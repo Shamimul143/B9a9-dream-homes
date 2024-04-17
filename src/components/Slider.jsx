@@ -3,7 +3,7 @@ import image2 from "../assets/images/Senior living community.jpg"
 import image3 from "../assets/images/Townhouse.jpg"
 import image4 from "../assets/images/Vacation rental.jpg"
 
-import React, { useRef, useState } from 'react';
+// import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 

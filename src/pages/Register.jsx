@@ -6,8 +6,8 @@ import { AuthContext } from "../firebaseProvider/FirebaseProvider";
 
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext)
-    const { googleLogin } = useContext(AuthContext)
+    const { createUser,googleLogin,githubLogin } = useContext(AuthContext)
+
 
     // const navigate = useNavigate();
     // const from = "/";
@@ -68,7 +68,7 @@ const Register = () => {
 
                         <div className="py-5 space-x-5 text-center">
                             <button onClick={() => googleLogin()} className="btn btn-accent">Google</button>
-                            <button className="btn btn-accent" >Github</button>
+                            <button  onClick={() => githubLogin()}  className="btn btn-accent" >Github</button>
                         </div>
                     </div>
                 </div>
