@@ -13,3 +13,4 @@ site url: https://b9a9-dream-homes.netlify.app/
 
 
 a. Swiper slider
+b. DaisyUi
