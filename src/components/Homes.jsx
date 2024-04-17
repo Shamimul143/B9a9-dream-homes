@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import SingleHome from './SingleHome';
+import Slider from './Slider';
 
 const Homes = () => {
     const [home, setHome] = useState([])
@@ -11,9 +12,9 @@ const Homes = () => {
     }, [])
     return (
         < div >
-        
+        <Slider></Slider>
             <h1 className="text-center text-2xl font-bold my-10 ">Homes.{home.length}</h1>
-            <div className="lg:grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {
                     home.map(home => <SingleHome key={home.id} home={home} ></SingleHome>)
                 }

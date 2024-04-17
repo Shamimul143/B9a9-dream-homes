@@ -13,9 +13,9 @@ const Login = () => {
         console.log(email, password);
 
         loginUser(email, password)
-            .then(result => {
-                console.log(result);
-            })
+            .then(() => alert('Login successfully')
+                
+            )
             .catch(error => { console.error(error) })
 
     }

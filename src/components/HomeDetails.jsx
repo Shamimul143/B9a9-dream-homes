@@ -21,7 +21,7 @@ const HomeDetails = () => {
               <Helmet>
                 <title>Home Details</title>
             </Helmet>
-            <div><figure ><img className="py-5 rounded-xl " src={image} alt="Home" /></figure></div>
+            <div><figure ><img className="py-5 rounded-xl  " src={image} alt="Home" /></figure></div>
             <div className="card-body">
                 <h2 className="card-title font-bold">{estate_title}</h2>
                 <div className='space-x-5 text-[#23be0a] mb-3'>

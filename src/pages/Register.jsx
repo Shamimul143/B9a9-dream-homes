@@ -3,22 +3,30 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../firebaseProvider/FirebaseProvider";
 
 
+
 const Register = () => {
 
     const { createUser } = useContext(AuthContext)
     const { googleLogin } = useContext(AuthContext)
 
+    // const navigate = useNavigate();
+    // const from = "/";
+
+
+
     const handleRegister = (e) => {
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password);
+        const name = e.target.name.value;
+        const image = e.target.image.value;
 
-        createUser(email, password)
-            .then(result => {
-                console.log(result);
+
+        createUser(email, password, name, image)
+            .then(() => {
+                alert('Register successfully');
             })
-            .catch(error => { console.error(error) })
+            .catch(() => { alert("Password minimum 6 character ") })
     }
     return (
         <div>
@@ -57,10 +65,10 @@ const Register = () => {
                                 <button className="btn btn-primary">Register</button>
                             </div>
                         </form>
-                        
+
                         <div className="py-5 space-x-5 text-center">
-                        <button onClick={() => googleLogin()} className="btn btn-accent">Google</button>
-                        <button className="btn btn-accent" >Github</button>
+                            <button onClick={() => googleLogin()} className="btn btn-accent">Google</button>
+                            <button className="btn btn-accent" >Github</button>
                         </div>
                     </div>
                 </div>

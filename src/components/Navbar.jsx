@@ -1,13 +1,19 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../firebaseProvider/FirebaseProvider";
-import Login from "../pages/Login";
+
 
 
 const Navbar = () => {
 
-    const { user } = useContext(AuthContext)
-    console.log(user);
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => alert("Logout successfully"))
+    }
+
+
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
@@ -40,9 +46,24 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            {/* <img src={user?.photoURL} alt="" /> */}
-                 <a className="btn">{user?.email}</a>
-                
+                {
+                    user ? <>
+                        <span>{user.email}</span>
+                        <div className="dropdown">
+                            <div tabIndex={0} role="button" ><img className="w-10 h-10 rounded-full ml-5" src={user?.photoURL||Image} alt="" /></div>
+                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box">
+                                <li>{user?.displayName}</li>
+                                <li><a onClick={handleLogOut} className="">logout</a></li>
+                                
+                            </ul>
+                        </div>
+
+                    </>
+                        : <Link to="/login"><button>Login</button></Link>
+                }
+
+
+
             </div>
         </div>
     );
