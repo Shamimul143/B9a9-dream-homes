@@ -8,7 +8,15 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-site url: https://b9a9-dream-homes.netlify.app/
+Live site url: https://b9a9-dream-homes.netlify.app/
+
+ bullet points:
+ 1. Dynamic Title
+ 2. Login page
+ 3. Registration Page
+ 4. Update Profile Page
+ 5. Error Page
+ 6. Private Router
 
 
 
