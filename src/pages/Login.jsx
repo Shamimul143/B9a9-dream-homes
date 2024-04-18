@@ -20,7 +20,7 @@ const Login = () => {
                 navigate("/")
 
             })
-            .catch(error => { console.error(error) })
+            .catch(() => {alert("Invalid User or Password") })
 
     }
     return (
